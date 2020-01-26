@@ -1,0 +1,11 @@
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\bin\Debug\netcoreapp3.1\Pig Latin Challenge.exe
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\bin\Debug\netcoreapp3.1\Pig Latin Challenge.deps.json
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\bin\Debug\netcoreapp3.1\Pig Latin Challenge.runtimeconfig.json
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\bin\Debug\netcoreapp3.1\Pig Latin Challenge.runtimeconfig.dev.json
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\bin\Debug\netcoreapp3.1\Pig Latin Challenge.dll
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\bin\Debug\netcoreapp3.1\Pig Latin Challenge.pdb
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\obj\Debug\netcoreapp3.1\Pig Latin Challenge.csprojAssemblyReference.cache
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\obj\Debug\netcoreapp3.1\Pig Latin Challenge.AssemblyInfoInputs.cache
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\obj\Debug\netcoreapp3.1\Pig Latin Challenge.AssemblyInfo.cs
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\obj\Debug\netcoreapp3.1\Pig Latin Challenge.dll
+C:\Users\Michael\source\repos\Grand Circus\Week 1 Capstone\Pig Latin Challenge\obj\Debug\netcoreapp3.1\Pig Latin Challenge.pdb

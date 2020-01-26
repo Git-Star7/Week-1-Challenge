@@ -30,19 +30,26 @@ namespace Pig_Latin_Challenge
                     StringBuilder firstLetters = new StringBuilder("");
                     StringBuilder newWord = new StringBuilder("");
 
-                    for (int i = 0; i < word.Length; i++)
+                    if (ContainsVowel(word[0]) == true)
                     {
-                        if (ContainsVowel(word[i]) == true)
+                        newWord.Append(word + "way");
+                    }
+                    else
+                    {
+                        for (int i = 0; i < word.Length; i++)
                         {
-                            firstVowelPosition = i;
-                            firstLetters.Append(word.Substring(0, firstVowelPosition));
-                            break;
+                            if (ContainsVowel(word[i]) == true)
+                            {
+                                firstVowelPosition = i;
+                                firstLetters.Append(word.Substring(0, firstVowelPosition));
+                                break;
+                            }
                         }
+                        newWord.Append(word.Substring(firstVowelPosition) + firstLetters + "ay");
                     }
 
-                    newWord.Append(word.Substring(firstVowelPosition) + firstLetters + "ay");
                     Console.WriteLine($"{newWord} is your new word");
-                    YesOrNo();
+                    validInput = YesOrNo();
                 }
             }
         }
@@ -56,7 +63,7 @@ namespace Pig_Latin_Challenge
             }
             return result;
         }
-        public static void YesOrNo()
+        public static string YesOrNo()
         {
             string userContinue = "";
             while (userContinue != "y" && userContinue != "n")
@@ -68,11 +75,8 @@ namespace Pig_Latin_Challenge
                 {
                     Console.WriteLine("Okay!!");
                 }
-                else if (userContinue == "y")
-                {
-                    PigLatinTranslator();
-                }
             }
+            return userContinue;
         }
     }
 }
