@@ -20,37 +20,22 @@ namespace Pig_Latin_Challenge
 
                 //input
                 string word = Console.ReadLine();
-                string wordLower = word.ToLower();
-                char firstCharacter = wordLower[0];
 
-                //lower case letter validation
-                if (Char.IsLower(firstCharacter) == true)
+                bool isLetterBoolCheck = true;
+                foreach (char c in word)
                 {
-                    int firstVowelPosition = 0;
-                    StringBuilder firstLetters = new StringBuilder("");
-                    StringBuilder newWord = new StringBuilder("");
-
-                    if (ContainsVowel(word[0]) == true)
+                    if (Char.IsDigit(c) == true || Char.IsSymbol(c) == true || c == '@')
                     {
-                        newWord.Append(word + "way");
+                        isLetterBoolCheck = false;
+                        Console.WriteLine(word);
+                        break;
                     }
-                    else
-                    {
-                        for (int i = 0; i < word.Length; i++)
-                        {
-                            if (ContainsVowel(word[i]) == true)
-                            {
-                                firstVowelPosition = i;
-                                firstLetters.Append(word.Substring(0, firstVowelPosition));
-                                break;
-                            }
-                        }
-                        newWord.Append(word.Substring(firstVowelPosition) + firstLetters + "ay");
-                    }
-
-                    Console.WriteLine($"{newWord} is your new word");
-                    validInput = YesOrNo();
                 }
+                if (isLetterBoolCheck == true)
+                {
+                    IsLetter(word);
+                }
+                validInput = YesOrNo();
             }
         }
         public static bool ContainsVowel(char c)
@@ -68,7 +53,7 @@ namespace Pig_Latin_Challenge
             string userContinue = "";
             while (userContinue != "y" && userContinue != "n")
             {
-                Console.WriteLine("\nWould you like to translate another word? y/n?");
+                Console.WriteLine("\nWould you like to translate another word? (y/n): ");
                 userContinue = Console.ReadLine().ToLower();
 
                 if (userContinue == "n")
@@ -77,6 +62,32 @@ namespace Pig_Latin_Challenge
                 }
             }
             return userContinue;
+        }
+        public static void IsLetter(string word)
+        {
+            string wordLower = word.ToLower();
+            int firstVowelPosition = 0;
+            StringBuilder firstLetters = new StringBuilder("");
+            StringBuilder newWord = new StringBuilder("");
+
+            if (ContainsVowel(word[0]) == true)
+            {
+                newWord.Append(word + "way");
+            }
+            else
+            {
+                for (int i = 0; i < word.Length; i++)
+                {
+                    if (ContainsVowel(word[i]) == true)
+                    {
+                        firstVowelPosition = i;
+                        firstLetters.Append(word.Substring(0, firstVowelPosition));
+                        break;
+                    }
+                }
+                newWord.Append(word.Substring(firstVowelPosition) + firstLetters + "ay");
+            }
+            Console.WriteLine($"{newWord} is your new word");
         }
     }
 }
